@@ -1,9 +1,11 @@
 # Дополнительное задание (MLOps, вариант 21)
 
+> **Где лежит доп. задание:** см. [`WHERE_IS_EXTRA_ASSIGNMENT.md`](WHERE_IS_EXTRA_ASSIGNMENT.md)  
+> **Скриншоты:** `screenshots/E01_model_hash.png` … `screenshots/E07_where_extra_files.png`
+
 Расширение обязательного цикла: MLflow в Docker с постоянным хранилищем, train-сервис в Compose-сети, gate-проверка API, хеш модели, нагрузочный тест, аудит запросов и отчёт о дрейфе признаков.
 
 Базовый пример `compose.yaml` (только API) **не смешан** с этой архитектурой. Расширенный стек — `compose.extra.yaml`.
-
 ## Архитектура
 
 | Сервис | Имя в сети | URI из другого контейнера | С хоста |

@@ -422,7 +422,10 @@ Content-Type: application/json
 
 ## Приложение Д. Дополнительное задание
 
-Выполнено расширение контура (см. `EXTRA_ASSIGNMENT.md` и `compose.extra.yaml`).
+**Где лежит доп. задание (карта путей):** `WHERE_IS_EXTRA_ASSIGNMENT.md`  
+**Описание:** `EXTRA_ASSIGNMENT.md` · **цифры:** `RESULTS_EXTRA.md` · **Compose:** `compose.extra.yaml`
+
+Выполнено расширение контура.
 
 1. **MLflow в Docker.** Сервис `mlflow`, слушатель `0.0.0.0:5000`, `--allowed-hosts` включает `mlflow:5000`. Постоянные volumes `seeds_mlflow_meta` (SQLite) и `seeds_mlflow_artifacts`.
 2. **Train-сервис.** `Dockerfile.train` + профиль `train`. URI трекинга — `http://mlflow:5000` (имя сервиса Compose-сети).
@@ -431,5 +434,17 @@ Content-Type: application/json
 5. **Нагрузочный тест.** `src/load_test.py` — последовательные и параллельные `POST /predict`, отчёт `results/load_test_report.json` (latency min/mean/p95/max, RPS, errors).
 6. **Логирование запросов.** Middleware + запись результата предсказания в `logs/api_requests.jsonl` (признаки зерна, predictions, latency; без персональных данных).
 7. **Дрейф признаков.** `src/drift_report.py` сравнивает train-split и успешные запросы из журнала (PSI), пишет `results/drift_report.json`.
+
+### Скриншоты доп. задания
+
+| Кадр | Файл |
+| --- | --- |
+| Хеш модели | `screenshots/E01_model_hash.png` |
+| Health + sha256 | `screenshots/E02_health_sha256.png` |
+| Compose extra | `screenshots/E03_compose_extra.png` |
+| Load test | `screenshots/E04_load_test.png` |
+| Журнал API | `screenshots/E05_api_request_log.png` |
+| Drift PSI | `screenshots/E06_drift_report.png` |
+| Карта файлов | `screenshots/E07_where_extra_files.png` |
 
 Базовый `compose.yaml` оставлен без смешения URI: расширенный стек поднимается только через `compose.extra.yaml`.

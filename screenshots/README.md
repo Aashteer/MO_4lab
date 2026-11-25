@@ -2,6 +2,23 @@
 
 Снимки кладутся в этот каталог и вставляются в `report/REPORT.md`. Имена фиксированы, чтобы отчёт не пришлось переписывать.
 
+## Дополнительное задание (E01–E07)
+
+**Где искать доп. задание целиком:** [`WHERE_IS_EXTRA_ASSIGNMENT.md`](../WHERE_IS_EXTRA_ASSIGNMENT.md)  
+**Описание:** [`EXTRA_ASSIGNMENT.md`](../EXTRA_ASSIGNMENT.md)
+
+| Файл | Что в кадре |
+| --- | --- |
+| `E01_model_hash.png` | SHA-256 `model.pkl`, verify OK |
+| `E02_health_sha256.png` | `/health` и `/metadata` с `model_sha256` |
+| `E03_compose_extra.png` | сервисы `mlflow` / `train` / `seeds-api` / `api-check` |
+| `E04_load_test.png` | latency / RPS sequential + parallel |
+| `E05_api_request_log.png` | фрагмент аудита `api_requests.jsonl` |
+| `E06_drift_report.png` | PSI по признакам |
+| `E07_where_extra_files.png` | карта путей доп. задания |
+
+Пересобрать карточки: `python scripts/make_extra_screenshots.py`
+
 | Файл | Что должно быть в кадре |
 | --- | --- |
 | `01_dataset_uci.png` | Страница UCI Seeds (id 236): 210 объектов, 7 признаков, 3 класса. |

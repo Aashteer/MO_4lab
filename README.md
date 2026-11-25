@@ -148,6 +148,9 @@ curl -s -X POST http://127.0.0.1:8000/predict \
 
 ## Дополнительное задание (Compose + наблюдаемость)
 
+**Где лежит доп. задание:** [`WHERE_IS_EXTRA_ASSIGNMENT.md`](WHERE_IS_EXTRA_ASSIGNMENT.md)  
+**Описание:** [`EXTRA_ASSIGNMENT.md`](EXTRA_ASSIGNMENT.md) · **цифры:** [`RESULTS_EXTRA.md`](RESULTS_EXTRA.md) · **скрины:** `screenshots/E01_*.png` … `E07_*.png`
+
 Отдельный стек в `compose.extra.yaml` (не смешивается с базовым `compose.yaml`):
 
 - MLflow в Docker, volumes для SQLite и artifacts, `--host 0.0.0.0`, `--allowed-hosts` с именем сервиса `mlflow:5000`
