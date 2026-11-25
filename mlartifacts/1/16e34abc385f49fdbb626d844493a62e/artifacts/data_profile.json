@@ -1,0 +1,94 @@
+{
+  "source": "UCI Machine Learning Repository, Seeds (id 236)",
+  "sha256": "1f3f83c0d8485ae9148061389d19628607e3f5660e3d6f40ec9102fb398bb12f",
+  "n_rows": 210,
+  "n_features": 7,
+  "features": [
+    "area",
+    "perimeter",
+    "compactness",
+    "length_of_kernel",
+    "width_of_kernel",
+    "asymmetry_coefficient",
+    "length_of_kernel_groove"
+  ],
+  "class_counts": {
+    "Kama": 70,
+    "Rosa": 70,
+    "Canadian": 70
+  },
+  "describe": {
+    "count": {
+      "area": 210.0,
+      "perimeter": 210.0,
+      "compactness": 210.0,
+      "length_of_kernel": 210.0,
+      "width_of_kernel": 210.0,
+      "asymmetry_coefficient": 210.0,
+      "length_of_kernel_groove": 210.0
+    },
+    "mean": {
+      "area": 14.847524,
+      "perimeter": 14.559286,
+      "compactness": 0.870999,
+      "length_of_kernel": 5.628533,
+      "width_of_kernel": 3.258605,
+      "asymmetry_coefficient": 3.700201,
+      "length_of_kernel_groove": 5.408071
+    },
+    "std": {
+      "area": 2.909699,
+      "perimeter": 1.305959,
+      "compactness": 0.023629,
+      "length_of_kernel": 0.443063,
+      "width_of_kernel": 0.377714,
+      "asymmetry_coefficient": 1.503557,
+      "length_of_kernel_groove": 0.49148
+    },
+    "min": {
+      "area": 10.59,
+      "perimeter": 12.41,
+      "compactness": 0.8081,
+      "length_of_kernel": 4.899,
+      "width_of_kernel": 2.63,
+      "asymmetry_coefficient": 0.7651,
+      "length_of_kernel_groove": 4.519
+    },
+    "25%": {
+      "area": 12.27,
+      "perimeter": 13.45,
+      "compactness": 0.8569,
+      "length_of_kernel": 5.26225,
+      "width_of_kernel": 2.944,
+      "asymmetry_coefficient": 2.5615,
+      "length_of_kernel_groove": 5.045
+    },
+    "50%": {
+      "area": 14.355,
+      "perimeter": 14.32,
+      "compactness": 0.87345,
+      "length_of_kernel": 5.5235,
+      "width_of_kernel": 3.237,
+      "asymmetry_coefficient": 3.599,
+      "length_of_kernel_groove": 5.223
+    },
+    "75%": {
+      "area": 17.305,
+      "perimeter": 15.715,
+      "compactness": 0.887775,
+      "length_of_kernel": 5.97975,
+      "width_of_kernel": 3.56175,
+      "asymmetry_coefficient": 4.76875,
+      "length_of_kernel_groove": 5.877
+    },
+    "max": {
+      "area": 21.18,
+      "perimeter": 17.25,
+      "compactness": 0.9183,
+      "length_of_kernel": 6.675,
+      "width_of_kernel": 4.033,
+      "asymmetry_coefficient": 8.456,
+      "length_of_kernel_groove": 6.55
+    }
+  }
+}

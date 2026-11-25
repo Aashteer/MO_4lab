@@ -1,0 +1,2 @@
+﻿CONTAINER ID   NAME        CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O    PIDS
+c64585c9caa2   seeds-api   0.13%     152.4MiB / 7.724GiB   1.93%     67.9kB / 71.8kB   139MB / 0B   25

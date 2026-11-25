@@ -1,0 +1,38 @@
+artifact_path: "file:///C:/Users/l-dan/Desktop/\u0412\u0443\u0437/4laba/mlops_lab/mlartifacts/1/models/m-bf48b6a6c765479e86dc7b7239317007/artifacts"
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.11
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.5.0
+model_id: m-bf48b6a6c765479e86dc7b7239317007
+model_size_bytes: 13263
+model_uuid: m-bf48b6a6c765479e86dc7b7239317007
+prompts: null
+run_id: e5baa6754bd040fda75ba22f96242484
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "area", "required": true}, {"type": "double",
+    "name": "perimeter", "required": true}, {"type": "double", "name": "compactness",
+    "required": true}, {"type": "double", "name": "length_of_kernel", "required":
+    true}, {"type": "double", "name": "width_of_kernel", "required": true}, {"type":
+    "double", "name": "asymmetry_coefficient", "required": true}, {"type": "double",
+    "name": "length_of_kernel_groove", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-11-10 09:19:29.831479'

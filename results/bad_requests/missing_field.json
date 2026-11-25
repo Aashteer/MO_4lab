@@ -1,0 +1,1 @@
+{"detail":[{"type":"missing","loc":["body","instances",0,"length_of_kernel_groove"],"msg":"Field required","input":{"area":"15.26","perimeter":"14.84","compactness":"0.871","length_of_kernel":"5.763","width_of_kernel":"3.312","asymmetry_coefficient":"2.221"}}]}

@@ -1,0 +1,20 @@
+{
+  "candidates": [
+    {
+      "algorithm": "lr",
+      "source_run_id": "7ac894ca3a4f461e8fc7a22bf8e88b45",
+      "run_name": "lr-C-10",
+      "val_f1_macro": 0.9262835249042146,
+      "val_accuracy": 0.9285714285714286,
+      "C": 10.0
+    },
+    {
+      "algorithm": "knn",
+      "source_run_id": "c130e6a8ccf74307a81287222ba98fa5",
+      "run_name": "knn-k-3",
+      "val_f1_macro": 0.9521367521367522,
+      "val_accuracy": 0.9523809523809523,
+      "n_neighbors": 3
+    }
+  ]
+}

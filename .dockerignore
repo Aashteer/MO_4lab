@@ -1,0 +1,20 @@
+.venv
+venv
+__pycache__
+**/__pycache__
+*.pyc
+.git
+mlruns
+mlartifacts
+mlflow.db
+mlflow.db-journal
+logs
+results
+report
+screenshots
+scripts
+**/*.md
+# Keep data/raw for Dockerfile.train; ignore anything else under data/
+data/**
+!data/raw/
+!data/raw/**

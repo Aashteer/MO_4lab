@@ -1,0 +1,24 @@
+name: seeds-mlops
+
+services:
+  seeds-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: seeds-api:${IMAGE_TAG:-v1}
+    container_name: seeds-api
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      MODEL_PATH: /app/exported_model
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3).read()"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped

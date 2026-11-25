@@ -1,0 +1,198 @@
+{
+  "n_train": 126,
+  "n_request_rows": 126,
+  "features": {
+    "area": {
+      "train": {
+        "n": 126,
+        "mean": 14.85127,
+        "std": 2.804701,
+        "min": 10.74,
+        "p25": 12.4525,
+        "median": 14.42,
+        "p75": 17.05,
+        "max": 20.71
+      },
+      "requests": {
+        "n": 126,
+        "mean": 17.132429,
+        "std": 3.59897,
+        "min": 10.82,
+        "p25": 13.995,
+        "median": 17.805,
+        "p75": 21.0,
+        "max": 21.0
+      },
+      "psi": 0.17146,
+      "abs_mean_shift_in_train_std": 0.813334,
+      "drift_level": "moderate"
+    },
+    "perimeter": {
+      "train": {
+        "n": 126,
+        "mean": 14.568492,
+        "std": 1.254715,
+        "min": 12.72,
+        "p25": 13.4825,
+        "median": 14.4,
+        "p75": 15.64,
+        "max": 17.23
+      },
+      "requests": {
+        "n": 126,
+        "mean": 14.568492,
+        "std": 1.254715,
+        "min": 12.72,
+        "p25": 13.4825,
+        "median": 14.4,
+        "p75": 15.64,
+        "max": 17.23
+      },
+      "psi": 0.0,
+      "abs_mean_shift_in_train_std": 0.0,
+      "drift_level": "stable"
+    },
+    "compactness": {
+      "train": {
+        "n": 126,
+        "mean": 0.870583,
+        "std": 0.023744,
+        "min": 0.8081,
+        "p25": 0.857025,
+        "median": 0.8748,
+        "p75": 0.886475,
+        "max": 0.9183
+      },
+      "requests": {
+        "n": 126,
+        "mean": 0.870583,
+        "std": 0.023744,
+        "min": 0.8081,
+        "p25": 0.857025,
+        "median": 0.8748,
+        "p75": 0.886475,
+        "max": 0.9183
+      },
+      "psi": 0.0,
+      "abs_mean_shift_in_train_std": 0.0,
+      "drift_level": "stable"
+    },
+    "length_of_kernel": {
+      "train": {
+        "n": 126,
+        "mean": 5.636167,
+        "std": 0.423434,
+        "min": 5.009,
+        "p25": 5.28525,
+        "median": 5.5695,
+        "p75": 5.956,
+        "max": 6.675
+      },
+      "requests": {
+        "n": 126,
+        "mean": 5.636167,
+        "std": 0.423434,
+        "min": 5.009,
+        "p25": 5.28525,
+        "median": 5.5695,
+        "p75": 5.956,
+        "max": 6.675
+      },
+      "psi": 0.0,
+      "abs_mean_shift_in_train_std": 0.0,
+      "drift_level": "stable"
+    },
+    "width_of_kernel": {
+      "train": {
+        "n": 126,
+        "mean": 3.256643,
+        "std": 0.365145,
+        "min": 2.63,
+        "p25": 2.96725,
+        "median": 3.2515,
+        "p75": 3.55875,
+        "max": 3.962
+      },
+      "requests": {
+        "n": 126,
+        "mean": 3.256643,
+        "std": 0.365145,
+        "min": 2.63,
+        "p25": 2.96725,
+        "median": 3.2515,
+        "p75": 3.55875,
+        "max": 3.962
+      },
+      "psi": 0.0,
+      "abs_mean_shift_in_train_std": 0.0,
+      "drift_level": "stable"
+    },
+    "asymmetry_coefficient": {
+      "train": {
+        "n": 126,
+        "mean": 3.667438,
+        "std": 1.515589,
+        "min": 0.7651,
+        "p25": 2.318,
+        "median": 3.599,
+        "p75": 4.79425,
+        "max": 8.315
+      },
+      "requests": {
+        "n": 126,
+        "mean": 4.77766,
+        "std": 2.20917,
+        "min": 0.7651,
+        "p25": 2.96375,
+        "median": 4.5005,
+        "p75": 7.2908,
+        "max": 8.0
+      },
+      "psi": 0.396647,
+      "abs_mean_shift_in_train_std": 0.732535,
+      "drift_level": "high"
+    },
+    "length_of_kernel_groove": {
+      "train": {
+        "n": 126,
+        "mean": 5.416103,
+        "std": 0.47633,
+        "min": 4.519,
+        "p25": 5.05075,
+        "median": 5.2725,
+        "p75": 5.84,
+        "max": 6.55
+      },
+      "requests": {
+        "n": 126,
+        "mean": 5.416103,
+        "std": 0.47633,
+        "min": 4.519,
+        "p25": 5.05075,
+        "median": 5.2725,
+        "p75": 5.84,
+        "max": 6.55
+      },
+      "psi": 0.0,
+      "abs_mean_shift_in_train_std": 0.0,
+      "drift_level": "stable"
+    }
+  },
+  "summary": {
+    "high_drift_features": [
+      "asymmetry_coefficient"
+    ],
+    "moderate_drift_features": [
+      "area"
+    ],
+    "stable_features": [
+      "perimeter",
+      "compactness",
+      "length_of_kernel",
+      "width_of_kernel",
+      "length_of_kernel_groove"
+    ],
+    "note": "PSI < 0.1 — стабильно, 0.1–0.25 — умеренный дрейф, >= 0.25 — сильный дрейф. Сравнение: train split vs успешные /predict из журнала запросов."
+  },
+  "request_log": "C:/Users/l-dan/Desktop/Вуз/4laba/mlops_lab/logs/api_requests.jsonl"
+}

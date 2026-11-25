@@ -1,0 +1,35 @@
+# MLflow tracking server for the extra Compose stack (variant 21).
+# Listens on 0.0.0.0; Host allow-list includes the Compose service name.
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    GIT_PYTHON_REFRESH=quiet
+
+WORKDIR /mlflow
+
+ARG PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+ARG PIP_TRUSTED_HOST=pypi.tuna.tsinghua.edu.cn
+
+RUN pip install --no-cache-dir \
+    -i ${PIP_INDEX_URL} \
+    --trusted-host ${PIP_TRUSTED_HOST} \
+    "mlflow==3.5.0" \
+    "sqlalchemy==2.0.44"
+
+RUN mkdir -p /mlflow/mlartifacts /mlflow/meta
+
+EXPOSE 5000
+
+HEALTHCHECK --interval=10s --timeout=5s --start-period=25s --retries=8 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=3).read()"
+
+# SQLite file and artifact root live on the mounted volume at /mlflow/meta and /mlflow/mlartifacts.
+CMD ["mlflow", "server", \
+     "--backend-store-uri", "sqlite:////mlflow/meta/mlflow.db", \
+     "--default-artifact-root", "/mlflow/mlartifacts", \
+     "--host", "0.0.0.0", \
+     "--port", "5000", \
+     "--workers", "1", \
+     "--allowed-hosts", "mlflow:5000,localhost:*,127.0.0.1:*,[::1]:*"]

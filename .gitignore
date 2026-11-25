@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+logs/
+!logs/.gitkeep
+.DS_Store
+Thumbs.db
+*.db-journal
+.docker_extra/

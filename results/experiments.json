@@ -1,0 +1,417 @@
+{
+  "experiment": "lab4-seeds",
+  "experiment_id": "1",
+  "runs": [
+    {
+      "run_id": "e9f1eb7c500943dab86cdd1a1b11bfd6",
+      "run_name": "lr-C-0.1",
+      "status": "FINISHED",
+      "start_time": "2026-11-10T16:18:49",
+      "end_time": "2026-11-10T16:18:56",
+      "params": {
+        "algorithm": "lr",
+        "scaler": "StandardScaler",
+        "random_state": "42",
+        "split": "60/20/20",
+        "stratify": "True",
+        "selection_metric": "val_f1_macro",
+        "sklearn_version": "1.7.2",
+        "mlflow_version": "3.5.0",
+        "C": "0.1",
+        "solver": "lbfgs",
+        "max_iter": "1000",
+        "n_iter_max": "11"
+      },
+      "metrics": {
+        "train_accuracy": 0.9523809523809523,
+        "train_f1_macro": 0.9527410888726827,
+        "train_precision_macro": 0.9538239538239539,
+        "train_recall_macro": 0.9523809523809522,
+        "train_f1_Kama": 0.9302325581395349,
+        "train_f1_Rosa": 0.975609756097561,
+        "train_f1_Canadian": 0.9523809523809523,
+        "val_accuracy": 0.8809523809523809,
+        "val_f1_macro": 0.8791583044456607,
+        "val_precision_macro": 0.8788766788766789,
+        "val_recall_macro": 0.8809523809523809,
+        "val_f1_Kama": 0.8148148148148148,
+        "val_f1_Rosa": 0.9655172413793104,
+        "val_f1_Canadian": 0.8571428571428571
+      },
+      "tags": {
+        "variant": "21",
+        "dataset": "uci-seeds",
+        "algorithm": "lr",
+        "stage": "train",
+        "data_sha256": "1f3f83c0d8485ae9148061389d19628607e3f5660e3d6f40ec9102fb398bb12f",
+        "python_version": "3.10.11"
+      }
+    },
+    {
+      "run_id": "16e34abc385f49fdbb626d844493a62e",
+      "run_name": "lr-C-1",
+      "status": "FINISHED",
+      "start_time": "2026-11-10T16:19:00",
+      "end_time": "2026-11-10T16:19:06",
+      "params": {
+        "algorithm": "lr",
+        "scaler": "StandardScaler",
+        "random_state": "42",
+        "split": "60/20/20",
+        "stratify": "True",
+        "selection_metric": "val_f1_macro",
+        "sklearn_version": "1.7.2",
+        "mlflow_version": "3.5.0",
+        "C": "1.0",
+        "solver": "lbfgs",
+        "max_iter": "1000",
+        "n_iter_max": "14"
+      },
+      "metrics": {
+        "train_accuracy": 0.9682539682539683,
+        "train_f1_macro": 0.9683462139876031,
+        "train_precision_macro": 0.9686231081579919,
+        "train_recall_macro": 0.9682539682539683,
+        "train_f1_Kama": 0.9523809523809523,
+        "train_f1_Rosa": 0.9879518072289156,
+        "train_f1_Canadian": 0.9647058823529412,
+        "val_accuracy": 0.9047619047619048,
+        "val_f1_macro": 0.902740937223696,
+        "val_precision_macro": 0.9055555555555556,
+        "val_recall_macro": 0.9047619047619048,
+        "val_f1_Kama": 0.8461538461538461,
+        "val_f1_Rosa": 0.9655172413793104,
+        "val_f1_Canadian": 0.896551724137931
+      },
+      "tags": {
+        "variant": "21",
+        "dataset": "uci-seeds",
+        "algorithm": "lr",
+        "stage": "train",
+        "data_sha256": "1f3f83c0d8485ae9148061389d19628607e3f5660e3d6f40ec9102fb398bb12f",
+        "python_version": "3.10.11"
+      }
+    },
+    {
+      "run_id": "7ac894ca3a4f461e8fc7a22bf8e88b45",
+      "run_name": "lr-C-10",
+      "status": "FINISHED",
+      "start_time": "2026-11-10T16:19:09",
+      "end_time": "2026-11-10T16:19:15",
+      "params": {
+        "algorithm": "lr",
+        "scaler": "StandardScaler",
+        "random_state": "42",
+        "split": "60/20/20",
+        "stratify": "True",
+        "selection_metric": "val_f1_macro",
+        "sklearn_version": "1.7.2",
+        "mlflow_version": "3.5.0",
+        "C": "10.0",
+        "solver": "lbfgs",
+        "max_iter": "1000",
+        "n_iter_max": "20"
+      },
+      "metrics": {
+        "train_accuracy": 1.0,
+        "train_f1_macro": 1.0,
+        "train_precision_macro": 1.0,
+        "train_recall_macro": 1.0,
+        "train_f1_Kama": 1.0,
+        "train_f1_Rosa": 1.0,
+        "train_f1_Canadian": 1.0,
+        "val_accuracy": 0.9285714285714286,
+        "val_f1_macro": 0.9262835249042146,
+        "val_precision_macro": 0.9361111111111112,
+        "val_recall_macro": 0.9285714285714285,
+        "val_f1_Kama": 0.88,
+        "val_f1_Rosa": 0.9655172413793104,
+        "val_f1_Canadian": 0.9333333333333333
+      },
+      "tags": {
+        "variant": "21",
+        "dataset": "uci-seeds",
+        "algorithm": "lr",
+        "stage": "train",
+        "data_sha256": "1f3f83c0d8485ae9148061389d19628607e3f5660e3d6f40ec9102fb398bb12f",
+        "python_version": "3.10.11"
+      }
+    },
+    {
+      "run_id": "c130e6a8ccf74307a81287222ba98fa5",
+      "run_name": "knn-k-3",
+      "status": "FINISHED",
+      "start_time": "2026-11-10T16:19:19",
+      "end_time": "2026-11-10T16:19:25",
+      "params": {
+        "algorithm": "knn",
+        "scaler": "StandardScaler",
+        "random_state": "42",
+        "split": "60/20/20",
+        "stratify": "True",
+        "selection_metric": "val_f1_macro",
+        "sklearn_version": "1.7.2",
+        "mlflow_version": "3.5.0",
+        "n_neighbors": "3",
+        "weights": "uniform"
+      },
+      "metrics": {
+        "train_accuracy": 0.9603174603174603,
+        "train_f1_macro": 0.960256288904214,
+        "train_precision_macro": 0.9624674842066147,
+        "train_recall_macro": 0.9603174603174603,
+        "train_f1_Kama": 0.9382716049382716,
+        "train_f1_Rosa": 0.9879518072289156,
+        "train_f1_Canadian": 0.9545454545454546,
+        "val_accuracy": 0.9523809523809523,
+        "val_f1_macro": 0.9521367521367522,
+        "val_precision_macro": 0.9583333333333334,
+        "val_recall_macro": 0.9523809523809524,
+        "val_f1_Kama": 0.9230769230769231,
+        "val_f1_Rosa": 1.0,
+        "val_f1_Canadian": 0.9333333333333333
+      },
+      "tags": {
+        "variant": "21",
+        "dataset": "uci-seeds",
+        "algorithm": "knn",
+        "stage": "train",
+        "data_sha256": "1f3f83c0d8485ae9148061389d19628607e3f5660e3d6f40ec9102fb398bb12f",
+        "python_version": "3.10.11"
+      }
+    },
+    {
+      "run_id": "e5baa6754bd040fda75ba22f96242484",
+      "run_name": "knn-k-5",
+      "status": "FINISHED",
+      "start_time": "2026-11-10T16:19:29",
+      "end_time": "2026-11-10T16:19:34",
+      "params": {
+        "algorithm": "knn",
+        "scaler": "StandardScaler",
+        "random_state": "42",
+        "split": "60/20/20",
+        "stratify": "True",
+        "selection_metric": "val_f1_macro",
+        "sklearn_version": "1.7.2",
+        "mlflow_version": "3.5.0",
+        "n_neighbors": "5",
+        "weights": "uniform"
+      },
+      "metrics": {
+        "train_accuracy": 0.9444444444444444,
+        "train_f1_macro": 0.9443903560369424,
+        "train_precision_macro": 0.9466242488511841,
+        "train_recall_macro": 0.9444444444444445,
+        "train_f1_Kama": 0.9156626506024096,
+        "train_f1_Rosa": 0.9629629629629629,
+        "train_f1_Canadian": 0.9545454545454546,
+        "val_accuracy": 0.9047619047619048,
+        "val_f1_macro": 0.9006921270547522,
+        "val_precision_macro": 0.918954248366013,
+        "val_recall_macro": 0.9047619047619048,
+        "val_f1_Kama": 0.8333333333333334,
+        "val_f1_Rosa": 0.9655172413793104,
+        "val_f1_Canadian": 0.9032258064516129
+      },
+      "tags": {
+        "variant": "21",
+        "dataset": "uci-seeds",
+        "algorithm": "knn",
+        "stage": "train",
+        "data_sha256": "1f3f83c0d8485ae9148061389d19628607e3f5660e3d6f40ec9102fb398bb12f",
+        "python_version": "3.10.11"
+      }
+    },
+    {
+      "run_id": "32c75f5cedee4f74a4aa74e5ab820896",
+      "run_name": "knn-k-11",
+      "status": "FINISHED",
+      "start_time": "2026-11-10T16:19:38",
+      "end_time": "2026-11-10T16:19:43",
+      "params": {
+        "algorithm": "knn",
+        "scaler": "StandardScaler",
+        "random_state": "42",
+        "split": "60/20/20",
+        "stratify": "True",
+        "selection_metric": "val_f1_macro",
+        "sklearn_version": "1.7.2",
+        "mlflow_version": "3.5.0",
+        "n_neighbors": "11",
+        "weights": "uniform"
+      },
+      "metrics": {
+        "train_accuracy": 0.9285714285714286,
+        "train_f1_macro": 0.9291043893871072,
+        "train_precision_macro": 0.930937279774489,
+        "train_recall_macro": 0.9285714285714285,
+        "train_f1_Kama": 0.8941176470588236,
+        "train_f1_Rosa": 0.9629629629629629,
+        "train_f1_Canadian": 0.9302325581395349,
+        "val_accuracy": 0.8809523809523809,
+        "val_f1_macro": 0.8773946360153256,
+        "val_precision_macro": 0.8849747474747475,
+        "val_recall_macro": 0.880952380952381,
+        "val_f1_Kama": 0.8,
+        "val_f1_Rosa": 0.9655172413793104,
+        "val_f1_Canadian": 0.8666666666666667
+      },
+      "tags": {
+        "variant": "21",
+        "dataset": "uci-seeds",
+        "algorithm": "knn",
+        "stage": "train",
+        "data_sha256": "1f3f83c0d8485ae9148061389d19628607e3f5660e3d6f40ec9102fb398bb12f",
+        "python_version": "3.10.11"
+      }
+    },
+    {
+      "run_id": "e1c6f836bcd742b185476f96181b1121",
+      "run_name": "lr-C-10-register",
+      "status": "FINISHED",
+      "start_time": "2026-11-10T16:19:50",
+      "end_time": "2026-11-10T16:19:56",
+      "params": {
+        "algorithm": "lr",
+        "scaler": "StandardScaler",
+        "random_state": "42",
+        "split": "60/20/20",
+        "stratify": "True",
+        "selection_metric": "val_f1_macro",
+        "sklearn_version": "1.7.2",
+        "mlflow_version": "3.5.0",
+        "C": "10.0",
+        "solver": "lbfgs",
+        "max_iter": "1000",
+        "n_iter_max": "20"
+      },
+      "metrics": {
+        "train_accuracy": 1.0,
+        "train_f1_macro": 1.0,
+        "train_precision_macro": 1.0,
+        "train_recall_macro": 1.0,
+        "train_f1_Kama": 1.0,
+        "train_f1_Rosa": 1.0,
+        "train_f1_Canadian": 1.0,
+        "val_accuracy": 0.9285714285714286,
+        "val_f1_macro": 0.9262835249042146,
+        "val_precision_macro": 0.9361111111111112,
+        "val_recall_macro": 0.9285714285714285,
+        "val_f1_Kama": 0.88,
+        "val_f1_Rosa": 0.9655172413793104,
+        "val_f1_Canadian": 0.9333333333333333
+      },
+      "tags": {
+        "variant": "21",
+        "dataset": "uci-seeds",
+        "algorithm": "lr",
+        "stage": "register",
+        "data_sha256": "1f3f83c0d8485ae9148061389d19628607e3f5660e3d6f40ec9102fb398bb12f",
+        "python_version": "3.10.11",
+        "registered_version": "1"
+      }
+    },
+    {
+      "run_id": "aa59daab8a5e4aad8284069caf47dcd4",
+      "run_name": "knn-k-3-register",
+      "status": "FINISHED",
+      "start_time": "2026-11-10T16:20:00",
+      "end_time": "2026-11-10T16:20:06",
+      "params": {
+        "algorithm": "knn",
+        "scaler": "StandardScaler",
+        "random_state": "42",
+        "split": "60/20/20",
+        "stratify": "True",
+        "selection_metric": "val_f1_macro",
+        "sklearn_version": "1.7.2",
+        "mlflow_version": "3.5.0",
+        "n_neighbors": "3",
+        "weights": "uniform"
+      },
+      "metrics": {
+        "train_accuracy": 0.9603174603174603,
+        "train_f1_macro": 0.960256288904214,
+        "train_precision_macro": 0.9624674842066147,
+        "train_recall_macro": 0.9603174603174603,
+        "train_f1_Kama": 0.9382716049382716,
+        "train_f1_Rosa": 0.9879518072289156,
+        "train_f1_Canadian": 0.9545454545454546,
+        "val_accuracy": 0.9523809523809523,
+        "val_f1_macro": 0.9521367521367522,
+        "val_precision_macro": 0.9583333333333334,
+        "val_recall_macro": 0.9523809523809524,
+        "val_f1_Kama": 0.9230769230769231,
+        "val_f1_Rosa": 1.0,
+        "val_f1_Canadian": 0.9333333333333333
+      },
+      "tags": {
+        "variant": "21",
+        "dataset": "uci-seeds",
+        "algorithm": "knn",
+        "stage": "register",
+        "data_sha256": "1f3f83c0d8485ae9148061389d19628607e3f5660e3d6f40ec9102fb398bb12f",
+        "python_version": "3.10.11",
+        "registered_version": "2"
+      }
+    },
+    {
+      "run_id": "a48e140c1b5e4a068288b253d49e7c0d",
+      "run_name": "evaluate-champion",
+      "status": "FINISHED",
+      "start_time": "2026-11-10T16:23:15",
+      "end_time": "2026-11-10T16:23:15",
+      "params": {
+        "algorithm": "knn",
+        "model_version": "2"
+      },
+      "metrics": {
+        "test_accuracy": 0.9047619047619048,
+        "test_f1_macro": 0.9,
+        "test_precision_macro": 0.9166666666666666,
+        "test_recall_macro": 0.9047619047619048,
+        "test_f1_Kama": 0.8333333333333334,
+        "test_f1_Rosa": 0.9333333333333333,
+        "test_f1_Canadian": 0.9333333333333333
+      },
+      "tags": {
+        "stage": "evaluate",
+        "variant": "21",
+        "evaluated_version": "2",
+        "evaluated_run_id": "aa59daab8a5e4aad8284069caf47dcd4"
+      }
+    }
+  ],
+  "registry": {
+    "name": "seeds-classifier",
+    "description": "Классификатор сортов пшеницы (UCI Seeds, вариант 21). Признаки: 7 геометрических измерений зерна. Классы: Kama, Rosa, Canadian.",
+    "aliases": {
+      "champion": "2"
+    },
+    "versions": [
+      {
+        "version": "1",
+        "run_id": "e1c6f836bcd742b185476f96181b1121",
+        "algorithm": "lr",
+        "params": {
+          "C": "10.0"
+        },
+        "val_f1_macro": 0.9262835249042146,
+        "val_accuracy": 0.9285714285714286,
+        "description": "lr val_f1_macro=0.926284 run=e1c6f836bcd742b185476f96181b1121"
+      },
+      {
+        "version": "2",
+        "run_id": "aa59daab8a5e4aad8284069caf47dcd4",
+        "algorithm": "knn",
+        "params": {
+          "n_neighbors": "3"
+        },
+        "val_f1_macro": 0.9521367521367522,
+        "val_accuracy": 0.9523809523809523,
+        "description": "knn val_f1_macro=0.952137 run=aa59daab8a5e4aad8284069caf47dcd4"
+      }
+    ]
+  }
+}

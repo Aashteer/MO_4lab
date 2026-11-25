@@ -1,0 +1,4 @@
+class,area,perimeter,compactness,length_of_kernel,width_of_kernel,asymmetry_coefficient,length_of_kernel_groove,intercept
+Kama,0.009355,0.031365,0.167856,0.107445,0.079358,-0.600204,-0.567223,0.519466
+Rosa,0.441391,0.438491,0.185955,0.339956,0.410724,0.189150,0.626069,-0.124477
+Canadian,-0.450746,-0.469856,-0.353812,-0.447401,-0.490082,0.411053,-0.058846,-0.394989

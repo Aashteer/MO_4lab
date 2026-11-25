@@ -1,0 +1,9 @@
+              precision    recall  f1-score   support
+
+        Kama     1.0000    0.7143    0.8333        14
+        Rosa     0.8750    1.0000    0.9333        14
+    Canadian     0.8750    1.0000    0.9333        14
+
+    accuracy                         0.9048        42
+   macro avg     0.9167    0.9048    0.9000        42
+weighted avg     0.9167    0.9048    0.9000        42

@@ -1,0 +1,2 @@
+﻿NAME        IMAGE          COMMAND                  SERVICE     CREATED          STATUS                    PORTS
+seeds-api   seeds-api:v1   "uvicorn src.app:app…"   seeds-api   11 minutes ago   Up 11 minutes (healthy)   127.0.0.1:8000->8000/tcp

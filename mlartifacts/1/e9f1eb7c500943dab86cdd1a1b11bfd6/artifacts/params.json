@@ -1,0 +1,6 @@
+{
+  "algorithm": "lr",
+  "C": 0.1,
+  "n_neighbors": null,
+  "random_state": 42
+}

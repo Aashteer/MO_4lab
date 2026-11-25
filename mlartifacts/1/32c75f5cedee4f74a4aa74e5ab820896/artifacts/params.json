@@ -1,0 +1,6 @@
+{
+  "algorithm": "knn",
+  "C": null,
+  "n_neighbors": 11,
+  "random_state": 42
+}

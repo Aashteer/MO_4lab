@@ -1,0 +1,12 @@
+{
+  "algorithm": "knn",
+  "file": "model.pkl",
+  "path": "C:/Users/l-dan/Desktop/Вуз/4laba/mlops_lab/exported_model/model.pkl",
+  "sha256": "131df221e3bd481d9926b313d4276118196c173b241f40e9f7aadd90164acffb",
+  "size_bytes": 12017,
+  "computed_at": "2026-11-25T13:02:06+00:00",
+  "model_name": "seeds-classifier",
+  "version": "2",
+  "alias": "champion",
+  "run_id": "aa59daab8a5e4aad8284069caf47dcd4"
+}

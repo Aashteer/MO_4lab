@@ -1,0 +1,16 @@
+{
+  "train_accuracy": 0.9444444444444444,
+  "train_f1_macro": 0.9443903560369424,
+  "train_precision_macro": 0.9466242488511841,
+  "train_recall_macro": 0.9444444444444445,
+  "train_f1_Kama": 0.9156626506024096,
+  "train_f1_Rosa": 0.9629629629629629,
+  "train_f1_Canadian": 0.9545454545454546,
+  "val_accuracy": 0.9047619047619048,
+  "val_f1_macro": 0.9006921270547522,
+  "val_precision_macro": 0.918954248366013,
+  "val_recall_macro": 0.9047619047619048,
+  "val_f1_Kama": 0.8333333333333334,
+  "val_f1_Rosa": 0.9655172413793104,
+  "val_f1_Canadian": 0.9032258064516129
+}

@@ -1,0 +1,121 @@
+# Extra MLOps stack (доп. задание): MLflow in Docker + train worker + API + gate check.
+# Keep separate from compose.yaml so the base API-only example stays unchanged.
+#
+# Usage (from mlops_lab):
+#   docker compose -f compose.extra.yaml up -d --build mlflow
+#   docker compose -f compose.extra.yaml run --rm train
+#   docker compose -f compose.extra.yaml up -d --build seeds-api api-check
+#
+# Inside the Compose network services talk by name, e.g. http://mlflow:5000
+# Host browser still uses http://127.0.0.1:5000 and http://127.0.0.1:8000
+
+name: seeds-mlops-extra
+
+services:
+  mlflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.mlflow
+    image: seeds-mlflow:${IMAGE_TAG:-v1}
+    container_name: seeds-mlflow
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - mlflow_meta:/mlflow/meta
+      - mlflow_artifacts:/mlflow/mlartifacts
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=3).read()"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+    image: seeds-train:${IMAGE_TAG:-v1}
+    container_name: seeds-train
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      GIT_PYTHON_REFRESH: quiet
+    volumes:
+      - ./results:/app/results
+    depends_on:
+      mlflow:
+        condition: service_healthy
+    profiles:
+      - train
+    restart: "no"
+
+  seeds-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        RUN_MODEL_INTEGRITY_CHECK: "1"
+    image: seeds-api:${IMAGE_TAG:-v1}
+    container_name: seeds-api-extra
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      MODEL_PATH: /app/exported_model
+      REQUEST_LOG_PATH: /app/logs/api_requests.jsonl
+      MODEL_HASH_PATH: /app/exported_model/model_sha256.txt
+    volumes:
+      - ./logs:/app/logs
+      - ./results:/app/results
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3).read()"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped
+
+  # Gate: compose "succeeds" only if smoke checks pass. Non-zero exit fails the job.
+  api-check:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        RUN_MODEL_INTEGRITY_CHECK: "1"
+    image: seeds-api:${IMAGE_TAG:-v1}
+    container_name: seeds-api-check
+    environment:
+      PYTHONPATH: /app
+    volumes:
+      - ./sample_request.json:/app/sample_request.json:ro
+      - ./expected_predictions.json:/app/expected_predictions.json:ro
+      - ./results:/app/results
+    depends_on:
+      seeds-api:
+        condition: service_healthy
+    command:
+      - python
+      - -m
+      - src.check_api
+      - --base-url
+      - http://seeds-api:8000
+      - --samples
+      - /app/sample_request.json
+      - --expected
+      - /app/expected_predictions.json
+      - --output
+      - /app/results/api_smoke_report_extra.json
+    restart: "no"
+
+volumes:
+  mlflow_meta:
+    name: seeds_mlflow_meta
+  mlflow_artifacts:
+    name: seeds_mlflow_artifacts

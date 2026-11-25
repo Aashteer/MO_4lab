@@ -1,0 +1,35 @@
+{
+  "model_name": "seeds-classifier",
+  "alias": "champion",
+  "version": "1",
+  "run_id": "e1c6f836bcd742b185476f96181b1121",
+  "model_uri": "models:/seeds-classifier@champion",
+  "algorithm": "lr",
+  "params": {
+    "C": "10.0",
+    "scaler": "StandardScaler",
+    "solver": "lbfgs"
+  },
+  "val_f1_macro": 0.9262835249042146,
+  "val_accuracy": 0.9285714285714286,
+  "features": [
+    "area",
+    "perimeter",
+    "compactness",
+    "length_of_kernel",
+    "width_of_kernel",
+    "asymmetry_coefficient",
+    "length_of_kernel_groove"
+  ],
+  "class_names": [
+    "Kama",
+    "Rosa",
+    "Canadian"
+  ],
+  "class_map": {
+    "1": "Kama",
+    "2": "Rosa",
+    "3": "Canadian"
+  },
+  "exported_at": "2026-11-10T16:26:25"
+}

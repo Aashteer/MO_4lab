@@ -1,0 +1,1 @@
+{"detail":[{"type":"value_error","loc":["body","instances",0,"area"],"msg":"Value error, value must be finite","input":null,"ctx":{"error":"value must be finite"}}]}

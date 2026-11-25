@@ -1,0 +1,35 @@
+{
+  "base_url": "http://127.0.0.1:8000",
+  "payload_instances": 3,
+  "warm_up_latency_ms": 8.25,
+  "sequential": {
+    "n": 20,
+    "ok": 20,
+    "errors": 0,
+    "latency_ms": {
+      "min": 4.326,
+      "mean": 14.037,
+      "median": 15.561,
+      "p95": 26.327,
+      "max": 26.977
+    },
+    "wall_seconds": 0.282,
+    "throughput_rps": 70.876
+  },
+  "parallel": {
+    "n": 24,
+    "ok": 24,
+    "errors": 0,
+    "latency_ms": {
+      "min": 6.746,
+      "mean": 23.591,
+      "median": 25.41,
+      "p95": 33.057,
+      "max": 35.522
+    },
+    "wall_seconds": 0.108,
+    "throughput_rps": 222.211,
+    "workers": 6
+  },
+  "stable": true
+}

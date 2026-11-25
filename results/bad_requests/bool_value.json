@@ -1,0 +1,1 @@
+{"detail":[{"type":"value_error","loc":["body","instances",0,"area"],"msg":"Value error, expected a JSON number","input":true,"ctx":{"error":"expected a JSON number"}}]}

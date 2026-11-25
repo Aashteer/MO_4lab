@@ -1,0 +1,10 @@
+# Dependencies for the inference Docker image (variant 21).
+# The exported MLflow snapshot stores a cloudpickle sklearn Pipeline in model.pkl,
+# so the API does not need the full MLflow tracking stack inside the container.
+scikit-learn==1.7.2
+pandas==2.3.3
+numpy==2.2.6
+fastapi==0.119.0
+uvicorn==0.37.0
+cloudpickle==3.1.1
+pydantic==2.12.3

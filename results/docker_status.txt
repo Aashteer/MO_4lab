@@ -1,0 +1,21 @@
+﻿DOCKER_INSTALLED_ENGINE_BLOCKED
+winget install -e --id Docker.DockerDesktop completed with exit code 0.
+Docker Desktop 4.99.0 is installed.
+Client: C:\Program Files\Docker\Docker\resources\bin\docker.exe
+Client version: 29.9.3
+`docker` is not on PATH in the shell that was already open.
+`docker version` via the full path returns HTTP 500 from dockerDesktopLinuxEngine.
+Backend log: engine linux/wsl failed to start: Virtual Machine Platform not enabled; No virtualization available.
+Windows edition reported by Docker Desktop: Windows Home (Hyper-V backend disabled).
+wsl.exe -l -v exits with status 1.
+Images seeds-api:v1 and seeds-api:v2 were not built.
+
+Next steps, in an elevated PowerShell:
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+Reboot. If Docker Desktop still reports no virtualization, enable Intel VT-x or AMD-V in BIOS and reboot again.
+Start Docker Desktop, wait for Engine running, open a new terminal, then from mlops_lab:
+$env:IMAGE_TAG = "v1"
+docker compose build
+docker tag seeds-api:v1 seeds-api:v2
+Stop local uvicorn on port 8000 before docker compose up -d.

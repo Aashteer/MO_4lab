@@ -1,0 +1,31 @@
+{
+  "instances": [
+    {
+      "area": 14.29,
+      "perimeter": 14.09,
+      "compactness": 0.905,
+      "length_of_kernel": 5.291,
+      "width_of_kernel": 3.337,
+      "asymmetry_coefficient": 2.699,
+      "length_of_kernel_groove": 4.825
+    },
+    {
+      "area": 12.15,
+      "perimeter": 13.45,
+      "compactness": 0.8443,
+      "length_of_kernel": 5.417,
+      "width_of_kernel": 2.837,
+      "asymmetry_coefficient": 3.638,
+      "length_of_kernel_groove": 5.338
+    },
+    {
+      "area": 15.57,
+      "perimeter": 15.15,
+      "compactness": 0.8527,
+      "length_of_kernel": 5.92,
+      "width_of_kernel": 3.231,
+      "asymmetry_coefficient": 2.64,
+      "length_of_kernel_groove": 5.879
+    }
+  ]
+}
